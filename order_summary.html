@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Summary - ProGaming Gear</title>
+  <link rel="stylesheet" href="./resources/misc/stylesumm.css">
+</head>
+<body>
+  <header>
+    <img class="logoimage" src="./resources/images/logo.png"/>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./order.html">Order</a></li>
+        <li><a href="./order_summary.html">Summary</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <!-- Customer Form -->
+    <form id="customerForm" class="customer-form">
+      <h2 style="margin-bottom: 20px; color: var(--primary);">Customer Information</h2>
+      
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="address">Shipping Address</label>
+        <textarea id="address" rows="4" required></textarea>
+      </div>
+      
+      <button type="submit" class="submit-btn">Submit Order</button>
+    </form>
+    
+    <!-- Invoice Display (initially hidden) -->
+    <div id="invoiceContainer" class="invoice-container">
+      <div class="invoice-header">
+        <div class="invoice-title">Order Invoice</div>
+        <div class="invoice-details">
+          <div id="invoiceDate"></div>
+          <div id="invoiceNumber"></div>
+        </div>
+      </div>
+      
+      <div class="invoice-body">
+        <div class="customer-info">
+          <h3 style="margin-bottom: 10px; color: var(--primary);">Customer Details</h3>
+          <p id="invoiceName"></p>
+          <p id="invoiceEmail"></p>
+          <p id="invoicePhone"></p>
+          <p id="invoiceAddress"></p>
+        </div>
+        
+        <h3 style="margin-bottom: 10px; color: var(--primary);">Order Summary</h3>
+        <table class="order-items">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th class="text-right">Total</th>
+            </tr>
+          </thead>
+          <tbody id="invoiceItems">
+            <!-- Items will be inserted here by JavaScript -->
+          </tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="3">Total</td>
+              <td class="text-right" id="invoiceTotal"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      
+      <div class="invoice-footer">
+        <p>Thank you for your order!</p>
+        <p>Your items will be shipped within 2-3 business days.</p>
+        <button class="print-btn" onclick="window.print()">Print Invoice</button>
+      </div>
+    </div>
+  </div>
+  <script src="./resources/js/scriptsumm.js"></script>
+</body>
+</html>
+

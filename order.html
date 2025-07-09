@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order</title>
+  <link rel="stylesheet" href="./resources/misc/style.css">
+</head>
+<body>
+  <header>
+    <img class="logoimage" src="./resources/images/logo.png"/>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./order.html">Order</a></li>
+        <li><a href="./order_summary.html">Summary</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="pre-container">
+    <h1>Order Your Choice</h1>
+  </div>
+  <div class="order-container">
+    <div class="productlist-section">
+      <div class="products-grid" id="productsGrid">
+        <!-- Daftar Product akan muncul disini -->
+      </div>
+    </div>
+
+    <div class="cart">
+      <h2>Your Cart</h2>
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart">Your cart is empty</p>
+      </div>
+      <div class="cart-total" id="cartTotal">
+        Total: $0.00
+      </div>
+      <button class="resetitem-btn" id="resetcart">Clear Cart</button>
+      <a href="./order_summary.html"><button class="checkout-btn" id="checkoutBtn">Ke Summary</button></a>
+    </div>
+  </div>
+  <script src="./resources/js/scriptsumm.js"></script>
+</body>
+</html>

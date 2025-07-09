@@ -1,0 +1,618 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --biru: #2563eb;
+    --biru-gelap: #1d4ed8;
+    --abu: #64748b;
+    --bg-biru: #ffffff;
+    --bg-abu: #f8fafc;
+    --text-biru: #1e293b;
+    --text-abu: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-biru);
+    background-color: var(--bg-abu);
+}
+
+/* Header */
+header {
+    background: var(--bg-biru);
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoimage {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-biru);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--biru);
+}
+
+/* Landing page sections */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heroMainImg {
+    width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-biru);
+}
+
+section p {
+    font-size: 1.1rem;
+    color: var(--text-abu);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Special button */
+.specialBtn button {
+    background: var(--biru);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.specialBtn button:hover {
+    background: var(--biru-gelap);
+}
+
+/* Featured products */
+.highlightproduct {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--bg-biru);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.highlightproduct:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.imgproduct {
+    flex: 1;
+    text-align: center;
+}
+
+.imgproduct img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.highlightproduct article {
+    flex: 1;
+    text-align: left;
+}
+
+.highlightproduct h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-biru);
+}
+
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+blockquote {
+    background: var(--bg-biru);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    font-style: italic;
+    border-left: 4px solid var(--biru);
+}
+
+blockquote div {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--biru);
+}
+
+/* Order page */
+.pre-container {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-biru);
+    margin: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+/* Opsional */
+.pre-container h1 {
+    font-size: 2.5rem;
+    color: var(--text-biru);
+}
+
+.order-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Opsional */
+.product-card {
+    background: var(--bg-biru);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Opsional */
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Opsional */
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-biru);
+}
+/* Html Javascript */
+.product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--biru);
+    margin-bottom: 1rem;
+}
+/* Class Hmtl yang ada javascript */
+.add-to-cart {
+    width: 100%;
+    background: var(--biru);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: var(--biru-gelap);
+}
+
+/* Cart/Keranjang belanja */
+.cart {
+    background: var(--bg-biru);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+/* Opsional */
+.cart h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-biru);
+}
+/* Opsional */
+.cart-items {
+    margin-bottom: 1.5rem;
+}
+
+.empty-cart {
+    text-align: center;
+    color: var(--text-abu);
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* Opsional: Class html yang ada di javascript cart-total */
+.cart-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: var(--bg-abu);
+}
+
+/* Opsional: Class html yang ada di javascript*/
+.cart-item-info h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-biru);
+}
+
+/* Opsional: Class html yang ada di javascript*/
+.cart-item-info p {
+    color: var(--text-abu);
+    font-size: 0.9rem;
+}
+
+/* Class html yang ada di javascript */
+.cart-item-total {
+    font-weight: bold;
+    color: var(--biru);
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
+    /* Opsional */
+    background: var(--bg-abu);
+    border-radius: 8px;
+    color: var(--text-biru);
+}
+
+.checkout-btn, .resetitem-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.checkout-btn {
+    background: var(--biru);
+    color: white;
+}
+/* Opsional */
+.checkout-btn:hover:not(:disabled) {
+    background: var(--biru-gelap);
+}
+
+.checkout-btn:disabled {
+    background: var(--abu);
+    cursor: not-allowed;
+}
+
+.resetitem-btn {
+    background: #dc2626;
+    color: white;
+}
+/* Opsional */
+.resetitem-btn:hover {
+    background: #b91c1c;
+}
+
+/* Footer */
+footer {
+    background: var(--text-biru);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Form and Invoice Specific Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.customer-form {
+    background: var(--bg-biru);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-biru);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--biru);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--biru);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--biru-gelap);
+}
+
+.invoice-container {
+    background: var(--bg-biru);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: none; /* Initially hidden */
+}
+
+.invoice-header {
+    background: var(--biru);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invoice-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.invoice-details {
+    text-align: right;
+}
+
+.invoice-body {
+    padding: 2rem;
+}
+
+.customer-info {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.customer-info h3 {
+    margin-bottom: 1rem;
+    color: var(--biru);
+}
+
+.customer-info p {
+    margin-bottom: 0.5rem;
+    color: var(--text-biru);
+}
+
+.order-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.order-items th,
+.order-items td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.order-items th {
+    background: var(--bg-abu);
+    font-weight: 600;
+    color: var(--text-biru);
+}
+
+.order-items .text-right {
+    text-align: right;
+}
+
+.total-row {
+    background: var(--bg-abu);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.total-row td {
+    color: var(--biru);
+}
+
+.invoice-footer {
+    background: var(--bg-abu);
+    padding: 2rem;
+    text-align: center;
+}
+
+.invoice-footer p {
+    margin-bottom: 0.5rem;
+    color: var(--text-abu);
+}
+
+.print-btn {
+    background: var(--abu);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.print-btn:hover {
+    background: #475569;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .order-container, .products-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    .highlightproduct, header, .invoice-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+    section, .container {
+        padding: 2rem 1rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+    .invoice-title {
+        font-size: 1.5rem;
+    }
+    .order-items {
+        font-size: 0.9rem;
+    }
+    .order-items th, .order-items td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid,adiator {
+        grid-template-columns: 1fr;
+    }
+
+    .order-items {
+        font-size: 0.8rem;
+    }
+    .invoice-body {
+        padding: 1rem;
+    }
+}
+
+/* Opsional */
+/* .cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.quantity-btn {
+    background: var(--biru);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.quantity-btn:hover {
+    background: var(--biru-gelap);
+}
+
+.quantity {
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+.remove-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+.remove-btn:hover {
+    background: #b91c1c;
+} */
